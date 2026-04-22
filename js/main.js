@@ -469,7 +469,40 @@ function enviarPedido() {
    ===================== */
 document.addEventListener("DOMContentLoaded", function() {
 
-  renderizarProductos(productos);
+  var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTqjaybQH7-52LQ0r1wkpHJVNIIC-hZvGr3GuqHS1qnUZnKIkPaq6hAwb9gAHtKjeU2tPmHjGRwuu1I/pub?output=csv";
+  fetch(CSV_URL)
+    .then(function(res) { return res.text(); })
+    .then(function(csv) {
+      var lineas = csv.split("\n").slice(1);
+      var lista = [];
+      lineas.forEach(function(linea, i) {
+        if (!linea.trim()) return;
+        var cols = linea.split(",");
+        var nombreVal   = (cols[0] || "").trim().replace(/^"|"$/g, "");
+        var precioBase  = parseFloat((cols[1] || "0").trim().replace(/^"|"$/g, "").replace(/[^\d.]/g, "")) || 0;
+        var categoriaVal = (cols[2] || "").trim().replace(/^"|"$/g, "");
+        var geneticasVal = (cols[3] || "").trim().replace(/^"|"$/g, "");
+        var imagenVal   = (cols[4] || "").trim().replace(/^"|"$/g, "");
+        if (!nombreVal) return;
+        var obj = {
+          id:       i + 1,
+          nombre:   nombreVal,
+          precio:   "$" + precioBase.toLocaleString("es-AR"),
+          precioNum: precioBase,
+          imgSrc:   imagenVal || "",
+          tipo:     categoriaVal
+        };
+        if (geneticasVal) {
+          obj.geneticas = geneticasVal.split("|").map(function(g) { return g.trim(); });
+        }
+        lista.push(obj);
+      });
+      renderizarProductos(lista);
+    })
+    .catch(function(err) {
+      console.error("Error cargando productos desde CSV:", err);
+      renderizarProductos(productos);
+    });
 
   /* ── Popup producto ── */
   document.getElementById("popup-cerrar").addEventListener("click", cerrarPopup);
