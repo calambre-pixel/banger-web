@@ -6,7 +6,7 @@
   <title>BANGER</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
@@ -72,21 +72,11 @@
     <div class="modal glass">
       <button class="popup__cerrar carrito-cerrar-x" id="btn-cerrar-modal-pago">✕</button>
       <h2 class="modal__titulo">Resumen de Pago</h2>
-
       <div class="modal-resumen" id="modal-pago-resumen"></div>
-
-      <div class="metodo-pago-selector">
-        <p class="popup__label">Método de pago:</p>
-        <div class="metodo-pago-btns">
-          <button class="metodo-btn activo" id="btn-metodo-usdt">USDT</button>
-          <button class="metodo-btn" id="btn-metodo-transferencia">Transferencia</button>
-        </div>
-      </div>
-
       <div class="usdt-box glass" id="bloque-usdt">
         <h3 class="usdt-box__titulo">Pago en USDT (TRC20)</h3>
         <div class="usdt-box__qr">
-          <img src="./img/qr-usdt.png" alt="QR USDT" onerror="this.style.display='none'" />
+          <img src="./img/qr-usdt.png" alt="QR USDT" loading="lazy" onerror="this.style.display='none'" />
         </div>
         <div class="usdt-box__datos">
           <p>
@@ -96,21 +86,6 @@
           </p>
         </div>
       </div>
-
-      <div class="usdt-box glass" id="bloque-transferencia" style="display:none;">
-        <h3 class="usdt-box__titulo">Transferencia Bancaria</h3>
-        <div class="usdt-box__datos">
-          <p><span class="label">Alias:</span> banger.co</p>
-          <p><span class="label">Lemontag:</span> $banger.co</p>
-          <p><span class="label">CBU:</span> 0000168300000003774173</p>
-        </div>
-        <div class="form-group" id="grupo-comprobante" style="margin-top:1rem;">
-          <label style="font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-muted);">Comprobante de transferencia <span style="color:var(--color-accent)">*</span></label>
-          <input type="file" id="f-comprobante" accept="image/*,.pdf" />
-          <span class="form-hint">Adjuntá foto o PDF del comprobante</span>
-        </div>
-      </div>
-
       <button class="btn-primary" id="btn-continuar-datos">Continuar con mis datos →</button>
       <button class="btn-seguir-comprando" id="btn-volver-carrito-desde-pago">← Volver al carrito</button>
     </div>
@@ -120,7 +95,6 @@
     <div class="modal glass">
       <button class="popup__cerrar carrito-cerrar-x" id="btn-cerrar-modal-datos">✕</button>
       <h2 class="modal__titulo">Tus Datos de Envío</h2>
-
       <form class="checkout-form" id="checkout-form" onsubmit="return false;">
         <div class="form-group">
           <label>Nombre completo</label>
@@ -159,7 +133,6 @@
         <button type="button" class="btn-primary" id="btn-enviar-pedido">Confirmar pedido</button>
         <button type="button" class="btn-seguir-comprando" id="btn-volver-modal-pago">← Volver al pago</button>
       </form>
-
       <div class="checkout-mensaje" id="checkout-mensaje" style="display:none;"></div>
     </div>
   </div>
@@ -177,7 +150,7 @@
     </div>
   </div>
 
-  <div id="version">v4.0</div>
+  <div id="version">v5.0</div>
 
   <script src="js/main.js"></script>
 </body>

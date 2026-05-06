@@ -15,7 +15,7 @@
   --color-muted:    #8a9186;
   --color-accent:   #c8d4b8;
 
-  --font-display:   Georgia, 'Times New Roman', serif;
+  --font-display:   'Anton', sans-serif;
   --font-heading:   'Anton', 'Bebas Neue', 'Arial Black', sans-serif;
   --font-body:      'Inter', sans-serif;
 
@@ -665,7 +665,6 @@ body.popup-abierto {
 /* USDT */
 .usdt-box {
   padding: var(--space-sm);
-  margin-bottom: var(--space-md);
 }
 
 .usdt-box__titulo {
@@ -1106,58 +1105,90 @@ body.popup-abierto {
 }
 .toast__ver:hover { background: rgba(200, 212, 184, 0.26); }
 
-.metodo-pago-selector {
-  margin-bottom: 0.25rem;
+.carrito-promo {
+  padding: 0.75rem 0 0.25rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 0.5rem;
 }
 
-.metodo-pago-btns {
+.promo-input-row {
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.4rem;
 }
 
-.metodo-btn {
+.promo-input-row input {
   flex: 1;
-  padding: 0.55rem 0.75rem;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius);
-  color: var(--color-muted);
+  color: var(--color-text);
   font-family: var(--font-body);
   font-size: 0.82rem;
+  padding: 0.55rem 0.75rem;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+}
+
+.promo-input-row input:focus {
+  border-color: rgba(200,212,184,0.45);
+}
+
+.promo-input-row input::placeholder {
+  text-transform: none;
+  color: rgba(138,145,134,0.5);
+  font-size: 0.78rem;
+}
+
+.btn-promo {
+  padding: 0.55rem 0.9rem;
+  background: rgba(200,212,184,0.10);
+  border: 1px solid rgba(200,212,184,0.28);
+  border-radius: var(--radius);
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
 }
 
-.metodo-btn.activo {
-  background: rgba(200,212,184,0.14);
-  border-color: rgba(200,212,184,0.40);
+.btn-promo:hover {
+  background: rgba(200,212,184,0.20);
+  border-color: rgba(200,212,184,0.45);
+}
+
+.promo-msg {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.03em;
+  min-height: 1.1em;
+}
+
+.promo-msg--ok  { color: var(--color-accent); }
+.promo-msg--err { color: #e07070; }
+
+.carrito-descuento-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  padding: 0.15rem 0;
+}
+
+.carrito-descuento-badge {
   color: var(--color-accent);
 }
 
-.metodo-btn:hover:not(.activo) {
-  border-color: rgba(255,255,255,0.25);
-  color: var(--color-text);
-}
-
-.form-hint {
-  font-size: 0.72rem;
-  color: var(--color-muted);
-  margin-top: 0.2rem;
-}
-
-.form-group input[type="file"] {
-  background: rgba(255,255,255,0.04);
-  border: 1px dashed rgba(200,212,184,0.25);
-  border-radius: var(--radius);
-  color: var(--color-muted);
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  padding: 8px 10px;
-  cursor: pointer;
-  width: 100%;
+.carrito-total-final {
+  font-size: 1rem;
+  color: var(--color-accent);
+  text-align: right;
+  padding: var(--space-xs) 0;
+  letter-spacing: 0.05em;
 }
 
 .modal--confirmacion {
