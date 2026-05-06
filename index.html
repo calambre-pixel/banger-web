@@ -94,8 +94,6 @@
             <span id="wallet-addr">TDPfrfpipHtENAANT2zkgLZNFmZE6MaJRw</span>
             <button class="btn-copy" id="btn-copy-wallet">Copiar</button>
           </p>
-          <p><span class="label">Alias:</span> banger.co</p>
-          <p><span class="label">Lemontag:</span> $banger.co</p>
         </div>
       </div>
 
@@ -105,6 +103,11 @@
           <p><span class="label">Alias:</span> banger.co</p>
           <p><span class="label">Lemontag:</span> $banger.co</p>
           <p><span class="label">CBU:</span> 0000168300000003774173</p>
+        </div>
+        <div class="form-group" id="grupo-comprobante" style="margin-top:1rem;">
+          <label style="font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-muted);">Comprobante de transferencia <span style="color:var(--color-accent)">*</span></label>
+          <input type="file" id="f-comprobante" accept="image/*,.pdf" />
+          <span class="form-hint">Adjuntá foto o PDF del comprobante</span>
         </div>
       </div>
 
@@ -147,11 +150,6 @@
           <label>Sucursal correo</label>
           <input type="text" id="f-sucursal" placeholder="Sucursal de correo más cercana" />
         </div>
-        <div class="form-group" id="grupo-comprobante" style="display:none;">
-          <label>Comprobante de transferencia <span style="color:var(--color-accent)">*</span></label>
-          <input type="file" id="f-comprobante" accept="image/*,.pdf" />
-          <span class="form-hint">Adjuntá foto o PDF del comprobante</span>
-        </div>
         <div class="form-group form-group--check">
           <label class="check-label">
             <input type="checkbox" id="f-confirma-pago" />
@@ -179,7 +177,7 @@
     </div>
   </div>
 
-  <div id="version">v3.9</div>
+  <div id="version">v4.0</div>
 
   <script src="js/main.js"></script>
 </body>
