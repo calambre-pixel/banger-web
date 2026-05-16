@@ -9,40 +9,40 @@ var CODIGOS_PROMO = {
 };
 
 var productos = [
-  { id:  1, nombre: "BIG CHIEF DUO 2G",      precio: "$72.500", precioNum:  72500, imgSrc: "./img/BIGCHIEFDUO2G.png",      tipo: "thc" },
-  { id:  2, nombre: "BOUTIQUE TRIPLE 2G",     precio: "$69.600", precioNum:  69600, imgSrc: "./img/BOUTIQUETRIPLE2G.png",   tipo: "thc" },
-  { id:  3, nombre: "CAPSULA BIG CHIEF 1G",   precio: "$49.300", precioNum:  49300, imgSrc: "./img/CAPSULABIGCHIEF.png",    tipo: "thc" },
-  { id:  4, nombre: "DOZO 2.5G",              precio: "$75.400", precioNum:  75400, imgSrc: "./img/DOZO25G.png",            tipo: "thc" },
-  { id:  5, nombre: "ELF THC 5.5G",           precio: "$63.800", precioNum:  63800, imgSrc: "./img/ELFTHC55G.png",          tipo: "thc" },
+  { id:  1, nombre: "BIG CHIEF DUO 2G",      precio: "USD 72.500", precioNum:  72500, imgSrc: "./img/BIGCHIEFDUO2G.png",      tipo: "thc" },
+  { id:  2, nombre: "BOUTIQUE TRIPLE 2G",     precio: "USD 69.600", precioNum:  69600, imgSrc: "./img/BOUTIQUETRIPLE2G.png",   tipo: "thc" },
+  { id:  3, nombre: "CAPSULA BIG CHIEF 1G",   precio: "USD 49.300", precioNum:  49300, imgSrc: "./img/CAPSULABIGCHIEF.png",    tipo: "thc" },
+  { id:  4, nombre: "DOZO 2.5G",              precio: "USD 75.400", precioNum:  75400, imgSrc: "./img/DOZO25G.png",            tipo: "thc" },
+  { id:  5, nombre: "ELF THC 5.5G",           precio: "USD 63.800", precioNum:  63800, imgSrc: "./img/ELFTHC55G.png",          tipo: "thc" },
   {
-    id:  6, nombre: "ELF BAR 3G",             precio: "$55.000", precioNum:  55000, imgSrc: "./img/ELFBAR3G.png",
+    id:  6, nombre: "ELF BAR 3G",             precio: "USD 55.000", precioNum:  55000, imgSrc: "./img/ELFBAR3G.png",
     tipo: "nicotina",
     sabores: ["Mango Ice","Watermelon","Blueberry","Strawberry","Peach Ice","Grape","Lemon Mint"]
   },
   {
-    id:  7, nombre: "ELF BAR ICE KING 40000", precio: "$52.200", precioNum:  52200, imgSrc: "./img/ELFBARICEKING40000.png",
+    id:  7, nombre: "ELF BAR ICE KING 40000", precio: "USD 52.200", precioNum:  52200, imgSrc: "./img/ELFBARICEKING40000.png",
     tipo: "nicotina",
     sabores: ["Mango Ice","Watermelon Ice","Blueberry Ice","Strawberry Kiwi","Triple Mango"]
   },
-  { id:  8, nombre: "GHOST 7G",               precio: "$75.400", precioNum:  75400, imgSrc: "./img/GHOST7G.png",            tipo: "thc" },
-  { id:  9, nombre: "HALF BAKED 3G",          precio: "$58.000", precioNum:  58000, imgSrc: "./img/HALFBAKED3G.png",        tipo: "thc" },
-  { id: 11, nombre: "JUNGLE BOYS 2G",         precio: "$60.900", precioNum:  60900, imgSrc: "./img/JUNGLEBOYS2G.png",       tipo: "thc" },
-  { id: 12, nombre: "MUHAMEDS 2G",            precio: "$66.700", precioNum:  66700, imgSrc: "./img/MUHAMEDS2G.png",         tipo: "thc" },
-  { id: 13, nombre: "PACKMAN 2G",             precio: "$63.800", precioNum:  63800, imgSrc: "./img/PACKMAN2G.png",          tipo: "thc" },
-  { id: 14, nombre: "PACKMAN DUAL 2G",        precio: "$69.600", precioNum:  69600, imgSrc: "./img/PACKMANDUAL2G.png",      tipo: "thc" },
-  { id: 15, nombre: "PEN AIRIS",              precio: "$34.800", precioNum:  34800, imgSrc: "./img/PENAIRIS.png",           tipo: "thc" },
+  { id:  8, nombre: "GHOST 7G",               precio: "USD 75.400", precioNum:  75400, imgSrc: "./img/GHOST7G.png",            tipo: "thc" },
+  { id:  9, nombre: "HALF BAKED 3G",          precio: "USD 58.000", precioNum:  58000, imgSrc: "./img/HALFBAKED3G.png",        tipo: "thc" },
+  { id: 11, nombre: "JUNGLE BOYS 2G",         precio: "USD 60.900", precioNum:  60900, imgSrc: "./img/JUNGLEBOYS2G.png",       tipo: "thc" },
+  { id: 12, nombre: "MUHAMEDS 2G",            precio: "USD 66.700", precioNum:  66700, imgSrc: "./img/MUHAMEDS2G.png",         tipo: "thc" },
+  { id: 13, nombre: "PACKMAN 2G",             precio: "USD 63.800", precioNum:  63800, imgSrc: "./img/PACKMAN2G.png",          tipo: "thc" },
+  { id: 14, nombre: "PACKMAN DUAL 2G",        precio: "USD 69.600", precioNum:  69600, imgSrc: "./img/PACKMANDUAL2G.png",      tipo: "thc" },
+  { id: 15, nombre: "PEN AIRIS",              precio: "USD 34.800", precioNum:  34800, imgSrc: "./img/PENAIRIS.png",           tipo: "thc" },
   {
-    id: 16, nombre: "PEN ELF",                precio: "$37.700", precioNum:  37700, imgSrc: "./img/PENELF.png",
+    id: 16, nombre: "PEN ELF",                precio: "USD 37.700", precioNum:  37700, imgSrc: "./img/PENELF.png",
     tipo: "nicotina",
     sabores: ["Mango","Blueberry","Strawberry Ice","Watermelon Ice"]
   },
-  { id: 17, nombre: "PHENOM 8.0",             precio: "$78.300", precioNum:  78300, imgSrc: "./img/PHENOM80.png",           tipo: "thc" },
-  { id: 18, nombre: "PULSE 5G",               precio: "$69.600", precioNum:  69600, imgSrc: "./img/PULSE5G.png",            tipo: "thc" },
-  { id: 19, nombre: "SLUGGERS HITT 2G",       precio: "$78.300", precioNum:  78300, imgSrc: "./img/SLUGGERSHITT2G.png",     tipo: "thc" },
-  { id: 20, nombre: "SLUGGERS SWITCH 2G",     precio: "$78.300", precioNum:  78300, imgSrc: "./img/SLUGGERSSWITCH2G.png",   tipo: "thc" },
-  { id: 21, nombre: "TORCH 5G",               precio: "$69.600", precioNum:  69600, imgSrc: "./img/TORCH5G.png",            tipo: "thc" },
-  { id: 22, nombre: "UNIVERSITY 2G",          precio: "$60.900", precioNum:  60900, imgSrc: "./img/UNIVERSITY2G.png",       tipo: "thc" },
-  { id: 23, nombre: "VIVA LA HEMP 3.5G",      precio: "$58.000", precioNum:  58000, imgSrc: "./img/VIVALAHEMP35G.png",      tipo: "thc" }
+  { id: 17, nombre: "PHENOM 8.0",             precio: "USD 78.300", precioNum:  78300, imgSrc: "./img/PHENOM80.png",           tipo: "thc" },
+  { id: 18, nombre: "PULSE 5G",               precio: "USD 69.600", precioNum:  69600, imgSrc: "./img/PULSE5G.png",            tipo: "thc" },
+  { id: 19, nombre: "SLUGGERS HITT 2G",       precio: "USD 78.300", precioNum:  78300, imgSrc: "./img/SLUGGERSHITT2G.png",     tipo: "thc" },
+  { id: 20, nombre: "SLUGGERS SWITCH 2G",     precio: "USD 78.300", precioNum:  78300, imgSrc: "./img/SLUGGERSSWITCH2G.png",   tipo: "thc" },
+  { id: 21, nombre: "TORCH 5G",               precio: "USD 69.600", precioNum:  69600, imgSrc: "./img/TORCH5G.png",            tipo: "thc" },
+  { id: 22, nombre: "UNIVERSITY 2G",          precio: "USD 60.900", precioNum:  60900, imgSrc: "./img/UNIVERSITY2G.png",       tipo: "thc" },
+  { id: 23, nombre: "VIVA LA HEMP 3.5G",      precio: "USD 58.000", precioNum:  58000, imgSrc: "./img/VIVALAHEMP35G.png",      tipo: "thc" }
 ];
 
 var COSTO_ENVIO_USD = 8;
@@ -95,7 +95,7 @@ function calcularSubtotal() {
 }
 
 function formatoPrecio(num) {
-  return "$" + num.toLocaleString("es-AR");
+  return "USD " + num.toLocaleString("en-US");
 }
 
 function aplicarCodigoPromo(codigo) {
@@ -380,7 +380,8 @@ function renderizarCarrito() {
     html += '<div class="carrito-descuento-row"><span>Subtotal</span><span>' + formatoPrecio(subtotal) + '</span></div>';
     html += '<div class="carrito-descuento-row carrito-descuento-badge"><span>Descuento ' + codigoAplicado + ' (' + descuentoAplicado + '%)</span><span>-' + formatoPrecio(subtotal - total) + '</span></div>';
   }
-  html += '<div class="carrito-total-final">Total: ' + formatoPrecio(total) + ' + ' + COSTO_ENVIO_USD + ' USD envío</div>';
+  html += '<div class="carrito-descuento-row"><span>Envío</span><span>USD ' + COSTO_ENVIO_USD + '</span></div>';
+  html += '<div class="carrito-total-final">Total: USD ' + (total + COSTO_ENVIO_USD) + '</div>';
   totalEl.innerHTML = html;
 
   var promoSection = document.getElementById("carrito-promo-section");
@@ -445,18 +446,13 @@ function renderizarResumenPago() {
   envioRow.className = "modal-resumen__item";
   envioRow.innerHTML =
     '<span class="modal-resumen__variante">Envío</span>' +
-    '<span class="modal-resumen__precio">' + COSTO_ENVIO_USD + ' USD</span>';
+    '<span class="modal-resumen__precio">' + 'USD ' + COSTO_ENVIO_USD + '</span>';
   res.appendChild(envioRow);
 
   var totalRow = document.createElement("div");
   totalRow.className = "modal-resumen__total";
-  totalRow.innerHTML = '<span>Total productos</span><span>' + formatoPrecio(calcularTotal()) + '</span>';
+  totalRow.innerHTML = '<span>Total</span><span>USD ' + (calcularTotal() + COSTO_ENVIO_USD) + '</span>';
   res.appendChild(totalRow);
-
-  var totalConEnvioRow = document.createElement("div");
-  totalConEnvioRow.className = "modal-resumen__total";
-  totalConEnvioRow.innerHTML = '<span>+ Envío</span><span>' + COSTO_ENVIO_USD + ' USD</span>';
-  res.appendChild(totalConEnvioRow);
 }
 
 function enviarPedido() {
@@ -489,7 +485,7 @@ function enviarPedido() {
     direccion: direccion,
     sucursal:  sucursal || "No especificada",
     productos: productosStr,
-    total:     formatoPrecio(calcularTotal()) + " + " + COSTO_ENVIO_USD + " USD envío",
+    total:     "USD " + (calcularTotal() + COSTO_ENVIO_USD),
     descuento: descuentoAplicado > 0 ? codigoAplicado + " (" + descuentoAplicado + "%)" : "Sin descuento",
     metodo_pago: "USDT (TRC20)"
   };
@@ -531,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var obj = {
           id:       i + 1,
           nombre:   nombreVal,
-          precio:   "$" + precioBase.toLocaleString("es-AR"),
+          precio:   "USD " + precioBase.toLocaleString("en-US"),
           precioNum: precioBase,
           imgSrc:   imagenVal || "",
           tipo:     categoriaVal
