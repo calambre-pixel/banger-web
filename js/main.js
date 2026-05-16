@@ -45,6 +45,8 @@ var productos = [
   { id: 23, nombre: "VIVA LA HEMP 3.5G",      precio: "$58.000", precioNum:  58000, imgSrc: "./img/VIVALAHEMP35G.png",      tipo: "thc" }
 ];
 
+var COSTO_ENVIO_USD = 8;
+
 var carrito = [];
 var descuentoAplicado = 0;
 var codigoAplicado = "";
@@ -378,7 +380,7 @@ function renderizarCarrito() {
     html += '<div class="carrito-descuento-row"><span>Subtotal</span><span>' + formatoPrecio(subtotal) + '</span></div>';
     html += '<div class="carrito-descuento-row carrito-descuento-badge"><span>Descuento ' + codigoAplicado + ' (' + descuentoAplicado + '%)</span><span>-' + formatoPrecio(subtotal - total) + '</span></div>';
   }
-  html += '<div class="carrito-total-final">Total: ' + formatoPrecio(total) + '</div>';
+  html += '<div class="carrito-total-final">Total: ' + formatoPrecio(total) + ' + ' + COSTO_ENVIO_USD + ' USD envío</div>';
   totalEl.innerHTML = html;
 
   var promoSection = document.getElementById("carrito-promo-section");
@@ -439,10 +441,22 @@ function renderizarResumenPago() {
     res.appendChild(descRow);
   }
 
+  var envioRow = document.createElement("div");
+  envioRow.className = "modal-resumen__item";
+  envioRow.innerHTML =
+    '<span class="modal-resumen__variante">Envío</span>' +
+    '<span class="modal-resumen__precio">' + COSTO_ENVIO_USD + ' USD</span>';
+  res.appendChild(envioRow);
+
   var totalRow = document.createElement("div");
   totalRow.className = "modal-resumen__total";
-  totalRow.innerHTML = '<span>Total</span><span>' + formatoPrecio(calcularTotal()) + '</span>';
+  totalRow.innerHTML = '<span>Total productos</span><span>' + formatoPrecio(calcularTotal()) + '</span>';
   res.appendChild(totalRow);
+
+  var totalConEnvioRow = document.createElement("div");
+  totalConEnvioRow.className = "modal-resumen__total";
+  totalConEnvioRow.innerHTML = '<span>+ Envío</span><span>' + COSTO_ENVIO_USD + ' USD</span>';
+  res.appendChild(totalConEnvioRow);
 }
 
 function enviarPedido() {
@@ -475,7 +489,7 @@ function enviarPedido() {
     direccion: direccion,
     sucursal:  sucursal || "No especificada",
     productos: productosStr,
-    total:     formatoPrecio(calcularTotal()),
+    total:     formatoPrecio(calcularTotal()) + " + " + COSTO_ENVIO_USD + " USD envío",
     descuento: descuentoAplicado > 0 ? codigoAplicado + " (" + descuentoAplicado + "%)" : "Sin descuento",
     metodo_pago: "USDT (TRC20)"
   };
